@@ -17,6 +17,7 @@ const input = document.getElementById("mark");
 
 btn.addEventListener('click', () => {
     let semAverage = 0;
+    document.querySelector(".semesterAverage").innerHTML = null;
 
     document.querySelectorAll(".modules").forEach((module)=> {
         module.querySelector(".moduleAverage").innerHTML = null;
@@ -33,7 +34,8 @@ btn.addEventListener('click', () => {
             
     });
 
-    console.log(`Semester average ${(semAverage / 18).toFixed(2)}`);
+    // console.log(`Semester average ${(semAverage / 18).toFixed(2)}`);
+    document.querySelector(".semesterAverage").innerHTML = (semAverage / 18).toFixed(2);
 });
 
 
