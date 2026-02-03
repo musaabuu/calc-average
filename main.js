@@ -2,9 +2,6 @@
 
 
 const btn = document.getElementById("btn");
-// document.getElementById("mark").addEventListener("input", function () {
-//     this.value = this.value.replace(/[^0-9]/g, "");
-// });
 
 document.querySelectorAll(".mark").forEach((markInput)=> {
     markInput.addEventListener("input", () => {
@@ -20,7 +17,7 @@ btn.addEventListener('click', () => {
     document.querySelector(".semesterAverage").innerHTML = null;
 
     document.querySelectorAll(".modules").forEach((module)=> {
-        module.querySelector(".moduleAverage").innerHTML = null;
+        module.querySelector(".moduleAverage").innerHTML = "average: ";
     });
 
     document.querySelectorAll(".modules").forEach((module)=> {
@@ -34,7 +31,6 @@ btn.addEventListener('click', () => {
             
     });
 
-    // console.log(`Semester average ${(semAverage / 18).toFixed(2)}`);
     document.querySelector(".semesterAverage").innerHTML = (semAverage / 18).toFixed(2);
 });
 
@@ -60,3 +56,5 @@ function calcModuleAverage(module, coeff) {
         return mAverage * coeff;
     }
 }
+
+
